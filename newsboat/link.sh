@@ -30,6 +30,13 @@ main() {
       rm "$HOME/.newsboat/urls"
       ln -s "$PWD/newsboat/urls" "$HOME/.newsboat/urls"
   fi
+  if [[ ! -f "$HOME/.newsboat/config" ]]
+    then
+      ln -s "$PWD/newsboat/config" "$HOME/.newsboat/config"
+    else
+      rm "$HOME/.newsboat/config"
+      ln -s "$PWD/newsboat/config" "$HOME/.newsboat/config"
+  fi
 }
 
 main "$@"
