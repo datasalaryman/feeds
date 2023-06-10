@@ -2,3 +2,4 @@ color listfocus black white
 color listfocus_unread black white
 color title black white underline
 color info black white underline
+browser "open %u"
