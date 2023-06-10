@@ -2,6 +2,9 @@ auto-reload yes
 
 browser "open %u"
 
+feed-sort-order lastupdated
+article-sort-order date-asc
+
 color listfocus black white
 color listfocus_unread black white
 color title black white underline
