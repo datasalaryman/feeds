@@ -34,6 +34,7 @@ main() {
   for i in $(cat "$PWD/newsboat/urls" | cut -f1 -d"#") # strip away comments
   do
     # TODO: handling for when the curl request fails
+    # TODO: Output new URL if redirected due to 301 HTTP status
     rss_yt=$(curl -sSL $i | xmlstarlet sel -t -v "//*[local-name()='feed']/*[local-name()='title']/text()" -n)
     rss_2=$(curl -sSL $i | xmlstarlet sel -t -v "//*[local-name()='channel']/*[local-name()='title']/text()" -n)
     atom_2=$(curl -sSL $i | xmlstarlet sel -t -v "//*[local-name()='rss']/*[local-name()='channel']/*[local-name()='title']/text()" -n)
